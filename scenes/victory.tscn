@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://oe2ppjb76sul"]
+
+[ext_resource type="Script" uid="uid://ca3cntlocruah" path="res://scripts/victory.gd" id="1_victory"]
+[ext_resource type="Texture2D" uid="uid://s8ljrw42d7wx" path="res://assets/sprites/Tes Envi.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://cudhcllposrh5" path="res://assets/ui/Text Box.png" id="3_textbox"]
+[ext_resource type="FontFile" uid="uid://dya8uox0xig0f" path="res://assets/fonts/LondrinaSolid-Black.ttf" id="4_font_black"]
+[ext_resource type="FontFile" uid="uid://bj27mdbnh3kvj" path="res://assets/fonts/LondrinaSolid-Light.ttf" id="5_font_light"]
+[ext_resource type="FontFile" uid="uid://bkocuwlfalgfd" path="res://assets/fonts/LondrinaSolid-Regular.ttf" id="6_font_regular"]
+
+[node name="Victory" type="Control" unique_id=1441475383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_victory")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1087663706]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_background")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterCenter" type="TextureRect" parent="." unique_id=1618007199]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogBox" type="NinePatchRect" parent="." unique_id=1933984942]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -282.0
+offset_right = -39.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_textbox")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox" unique_id=450504351]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogBox/MarginContainer" unique_id=1470822273]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1591347303]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_font_regular")
+theme_override_font_sizes/font_size = 28
+text = "Speaker Name"
+horizontal_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=44046894]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_font_black")
+theme_override_font_sizes/font_size = 50
+text = "VICTORY!"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1735106803]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_font_light")
+theme_override_font_sizes/font_size = 30
+text = "You survived all waves!"
+horizontal_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=280503505]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_font_regular")
+theme_override_font_sizes/font_size = 24
+text = "Waves Completed: 3/3"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1703875752]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="NarrationLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=918826541]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_font_light")
+theme_override_font_sizes/font_size = 22
+text = "The forest is safe once more. Nature has triumphed!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1354402273]
+layout_mode = 2
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="DialogBox/MarginContainer/VBoxContainer/ButtonContainer" unique_id=422773265]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="DialogBox/MarginContainer/VBoxContainer/ButtonContainer" unique_id=954714367]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"

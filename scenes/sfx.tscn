@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dswc84a0aigo3"]
+
+[ext_resource type="Script" uid="uid://c7gvyd1yrnudl" path="res://scripts/sfx.gd" id="1_sfx"]
+[ext_resource type="AudioStream" uid="uid://ctvu6lpf7fl0c" path="res://assets/SFX GGJ/click_sound.mp3" id="2_click"]
+[ext_resource type="AudioStream" uid="uid://rm6rnn1s73dc" path="res://assets/SFX GGJ/Hit_Tower.mp3" id="3_hit"]
+[ext_resource type="AudioStream" uid="uid://67ajxx15sklw" path="res://assets/SFX GGJ/Notif_Final Wave.wav" id="4_notif"]
+[ext_resource type="AudioStream" uid="uid://bk8mqnkaogxxw" path="res://assets/SFX GGJ/Serang_Badak.mp3" id="5_badak"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Serang_Gajah.wav" id="6_gajah"]
+[ext_resource type="AudioStream" uid="uid://cwny6dxgq38r8" path="res://assets/SFX GGJ/Serang_Macan.mp3" id="7_macan"]
+[ext_resource type="AudioStream" uid="uid://d04r85qbae01d" path="res://assets/SFX GGJ/Spawn_Boss.mp3" id="8_boss"]
+[ext_resource type="AudioStream" uid="uid://doeyle3h78mdb" path="res://assets/SFX GGJ/Spawn_Bulldozer dan Excavator.mp3" id="9_bulldozer"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Mati_Bulldozer-Excavator.mp3" id="10_mati"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Serang_Bulldozer.mp3" id="11_bulldozer_attack"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Serang_Excavator.mp3" id="12_excavator_attack"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Spawn_Badak.mp3" id="13_spawn_badak"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Spawn_Gajah.mp3" id="14_spawn_gajah"]
+[ext_resource type="AudioStream" path="res://assets/SFX GGJ/Spawn_Macan.mp3" id="15_spawn_macan"]
+
+[node name="Sfx" type="Node" unique_id=929856999]
+script = ExtResource("1_sfx")
+click_sound = ExtResource("2_click")
+hit_tower_sound = ExtResource("3_hit")
+notif_final_wave_sound = ExtResource("4_notif")
+serang_badak_sound = ExtResource("5_badak")
+serang_gajah_sound = ExtResource("6_gajah")
+serang_macan_sound = ExtResource("7_macan")
+spawn_boss_sound = ExtResource("8_boss")
+spawn_bulldozer_sound = ExtResource("9_bulldozer")
+mati_bulldozer_sound = ExtResource("10_mati")
+serang_bulldozer_sound = ExtResource("11_bulldozer_attack")
+serang_excavator_sound = ExtResource("12_excavator_attack")
+spawn_badak_sound = ExtResource("13_spawn_badak")
+spawn_gajah_sound = ExtResource("14_spawn_gajah")
+spawn_macan_sound = ExtResource("15_spawn_macan")

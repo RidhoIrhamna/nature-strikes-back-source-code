@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk8mqnkaogxxw"
+path="res://.godot/imported/Serang_Badak.mp3-dcd94631f303a7193426bb4d55e4dfdc.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX GGJ/Serang_Badak.mp3"
+dest_files=["res://.godot/imported/Serang_Badak.mp3-dcd94631f303a7193426bb4d55e4dfdc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

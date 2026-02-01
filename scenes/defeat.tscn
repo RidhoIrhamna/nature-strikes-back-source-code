@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://defeat123456"]
+
+[ext_resource type="Script" uid="uid://ilyb0rrp7yxw" path="res://scripts/defeat.gd" id="1_defeat"]
+[ext_resource type="Texture2D" uid="uid://s8ljrw42d7wx" path="res://assets/sprites/Tes Envi.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://cudhcllposrh5" path="res://assets/ui/Text Box.png" id="3_textbox"]
+[ext_resource type="FontFile" uid="uid://dya8uox0xig0f" path="res://assets/fonts/LondrinaSolid-Black.ttf" id="4_font_black"]
+[ext_resource type="FontFile" uid="uid://bj27mdbnh3kvj" path="res://assets/fonts/LondrinaSolid-Light.ttf" id="5_font_light"]
+[ext_resource type="FontFile" uid="uid://bkocuwlfalgfd" path="res://assets/fonts/LondrinaSolid-Regular.ttf" id="6_font_regular"]
+
+[node name="Defeat" type="Control" unique_id=1988858713]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_defeat")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1740651351]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_background")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterCenter" type="TextureRect" parent="." unique_id=2133726358]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogBox" type="NinePatchRect" parent="." unique_id=1444227249]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -286.0
+offset_right = -35.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_textbox")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox" unique_id=78882566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogBox/MarginContainer" unique_id=1427001360]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=838175547]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_font_regular")
+theme_override_font_sizes/font_size = 28
+text = "Speaker Name"
+horizontal_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1301297698]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_font_black")
+theme_override_font_sizes/font_size = 50
+text = "DEFEAT!"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=382898679]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_font_light")
+theme_override_font_sizes/font_size = 30
+text = "Your spawner was destroyed!"
+horizontal_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=1968753242]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_font_regular")
+theme_override_font_sizes/font_size = 24
+text = "Waves Survived: 1/3"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=669589237]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="NarrationLabel" type="Label" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=663178815]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_font_light")
+theme_override_font_sizes/font_size = 22
+text = "The forest has fallen. Will you rise again?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="DialogBox/MarginContainer/VBoxContainer" unique_id=473960751]
+layout_mode = 2
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="DialogBox/MarginContainer/VBoxContainer/ButtonContainer" unique_id=748380242]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="DialogBox/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1499026684]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bke85dxoujcbm"
+path="res://.godot/imported/Anomaly Coming_Nature Strikes Back.mp3-75726ca04f5697045498077c05bb4400.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Anomaly Coming_Nature Strikes Back.mp3"
+dest_files=["res://.godot/imported/Anomaly Coming_Nature Strikes Back.mp3-75726ca04f5697045498077c05bb4400.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

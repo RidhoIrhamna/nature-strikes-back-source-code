@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cwwrfnrw2s1ct"]
+
+[ext_resource type="Script" uid="uid://dg8tpc70gfgva" path="res://scripts/slime.gd" id="1_tqn4w"]
+[ext_resource type="Texture2D" uid="uid://di2uo724exk7w" path="res://assets/sprites/Eskavator.png" id="2_bq37b"]
+[ext_resource type="Texture2D" uid="uid://jbjfhk6ireih" path="res://assets/ui/FrameHealth.png" id="5_health_frame"]
+[ext_resource type="Texture2D" uid="uid://bj3y3ejxvqiap" path="res://assets/ui/Health Musuh.png" id="6_health_enemy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_con8n"]
+atlas = ExtResource("2_bq37b")
+region = Rect2(0, 0, 538, 538)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gkpk"]
+atlas = ExtResource("2_bq37b")
+region = Rect2(538, 0, 538, 538)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq8m2"]
+atlas = ExtResource("2_bq37b")
+region = Rect2(0, 0, 538, 538)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o243"]
+atlas = ExtResource("2_bq37b")
+region = Rect2(0, 0, 538, 538)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0l8pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_con8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gkpk")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq8m2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o243")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35t6e"]
+size = Vector2(199, 273)
+
+[node name="slime" type="CharacterBody2D" unique_id=1455240668 groups=["slime"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 2
+script = ExtResource("1_tqn4w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=695522675 groups=["slime"]]
+position = Vector2(0, -1)
+scale = Vector2(0.9875, 1)
+sprite_frames = SubResource("SpriteFrames_0l8pv")
+animation = &"attack"
+autoplay = "idle"
+frame_progress = 0.9249259
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1290201323]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_35t6e")
+
+[node name="RayCastleft" type="RayCast2D" parent="." unique_id=615494228]
+target_position = Vector2(-200, 0)
+
+[node name="HealthBarContainer" type="Node2D" parent="." unique_id=447986563]
+position = Vector2(-72, -141)
+scale = Vector2(4, 4)
+
+[node name="FrameHealth" type="Sprite2D" parent="HealthBarContainer" unique_id=1162749760]
+position = Vector2(18.499998, 7.8125014)
+scale = Vector2(0.095108695, 0.07974133)
+texture = ExtResource("5_health_frame")
+
+[node name="HealthBar" type="TextureProgressBar" parent="HealthBarContainer" unique_id=1361918328]
+offset_left = 1.5000002
+offset_top = 5.750001
+offset_right = 331.5
+offset_bottom = 35.75
+scale = Vector2(0.1, 0.1)
+value = 100.0
+texture_progress = ExtResource("6_health_enemy")

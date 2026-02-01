@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d04r85qbae01d"
+path="res://.godot/imported/Spawn_Boss.mp3-ee8fa68d9a2b4eb6dc3c7dfefb9bc19e.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX GGJ/Spawn_Boss.mp3"
+dest_files=["res://.godot/imported/Spawn_Boss.mp3-ee8fa68d9a2b4eb6dc3c7dfefb9bc19e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

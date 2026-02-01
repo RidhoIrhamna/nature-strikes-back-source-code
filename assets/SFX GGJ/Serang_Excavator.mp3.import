@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ppmv8wj05mux"
+path="res://.godot/imported/Serang_Excavator.mp3-4ce9c77e7b30d3c1a11b9035b3c71d00.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX GGJ/Serang_Excavator.mp3"
+dest_files=["res://.godot/imported/Serang_Excavator.mp3-4ce9c77e7b30d3c1a11b9035b3c71d00.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

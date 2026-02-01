@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://leynegsf8w03"]
+
+[ext_resource type="Script" uid="uid://cayv7258w82v2" path="res://scripts/music.gd" id="1_music"]
+[ext_resource type="AudioStream" uid="uid://cd20xxyc3s353" path="res://assets/music/Intro_Nature Strikes Back.mp3" id="3_intro"]
+[ext_resource type="AudioStream" uid="uid://btnbe6m1hxpfb" path="res://assets/music/Battle_Nature Strikes Back.mp3" id="4_battle"]
+[ext_resource type="AudioStream" uid="uid://de8vyjvaaqen4" path="res://assets/music/Win_Nature Strikes Back.mp3" id="5_win"]
+[ext_resource type="AudioStream" uid="uid://dkc04w3j7eefa" path="res://assets/music/Lose_Nature Strikes Back.mp3" id="6_lose"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=1830448222]
+autoplay = true
+script = ExtResource("1_music")
+intro_music = ExtResource("3_intro")
+gameplay_music = ExtResource("4_battle")
+win_music = ExtResource("5_win")
+lose_music = ExtResource("6_lose")

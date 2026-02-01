@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4cw4qrl0by4d"
+path="res://.godot/imported/Mati_Bulldozer-Excavator.mp3-3d2f61f44303f1d1cc45c3891a776c14.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX GGJ/Mati_Bulldozer-Excavator.mp3"
+dest_files=["res://.godot/imported/Mati_Bulldozer-Excavator.mp3-3d2f61f44303f1d1cc45c3891a776c14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

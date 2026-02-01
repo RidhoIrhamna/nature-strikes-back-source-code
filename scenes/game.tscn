@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://yicge48108e0"]
+
+[ext_resource type="Script" uid="uid://duj0falcbfd1q" path="res://scripts/game_manager.gd" id="1_gee14"]
+[ext_resource type="Texture2D" uid="uid://dpxwno8i80gpe" path="res://assets/sprites/Frame 34.png" id="2_p57ef"]
+[ext_resource type="PackedScene" uid="uid://ctl27dic16wxy" path="res://scenes/spawner_enemy.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://28s5whu6ws8r" path="res://scenes/spawn_ui.tscn" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://htsu3544qqff" path="res://scenes/spawner_player.tscn" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://chccyoifeqtlb" path="res://scripts/camera_controller.gd" id="5_camera"]
+
+[node name="Game" type="Node2D" unique_id=946417594]
+
+[node name="GameManager" type="Node" parent="." unique_id=528957935]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=751119737]
+offset_right = 3840.0
+offset_bottom = 2160.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_p57ef")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=276215334]
+position = Vector2(480, 269)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+script = ExtResource("5_camera")
+
+[node name="EnemySpawner" parent="." unique_id=18490248 instance=ExtResource("3_iywne")]
+position = Vector2(1922, 400)
+scale = Vector2(0.5, 0.5)
+
+[node name="PlayerSpawner" parent="." unique_id=1199409134 instance=ExtResource("4_lbhrr")]
+position = Vector2(0, 400)
+
+[node name="SpawnUI" parent="." unique_id=673233536 instance=ExtResource("3_lbhrr")]
+follow_viewport_scale = 0.001
+spawner_path = NodePath("../PlayerSpawner")

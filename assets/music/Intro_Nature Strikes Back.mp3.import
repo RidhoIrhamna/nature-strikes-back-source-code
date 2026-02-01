@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd20xxyc3s353"
+path="res://.godot/imported/Intro_Nature Strikes Back.mp3-3f1b71e8ba3343682b30c21915dc4746.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Intro_Nature Strikes Back.mp3"
+dest_files=["res://.godot/imported/Intro_Nature Strikes Back.mp3-3f1b71e8ba3343682b30c21915dc4746.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

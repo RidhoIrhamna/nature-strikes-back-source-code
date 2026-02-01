@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://clle875s02lx2"]
+
+[ext_resource type="Script" uid="uid://cjyo8fshbjskw" path="res://scripts/main_menu.gd" id="1_main_menu"]
+[ext_resource type="Texture2D" uid="uid://bpvg1ycejjm88" path="res://assets/ui/Main Menu.png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://cudhcllposrh5" path="res://assets/ui/Text Box.png" id="3_textbox"]
+[ext_resource type="FontFile" uid="uid://bkocuwlfalgfd" path="res://assets/fonts/LondrinaSolid-Regular.ttf" id="5_font_regular"]
+
+[node name="MainMenu" type="Control" unique_id=1234567890]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main_menu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1234567891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wu84c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleContainer" type="VBoxContainer" parent="." unique_id=1234567892]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.0
+offset_top = 319.0
+offset_right = 311.0
+offset_bottom = 476.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="TitleContainer" unique_id=1234567894]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="TitleContainer" unique_id=1234567898]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_regular")
+theme_override_font_sizes/font_size = 36
+text = "Start Game"
+
+[node name="MenuBox" type="NinePatchRect" parent="TitleContainer" unique_id=1234567895]
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("3_textbox")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="TitleContainer/MenuBox" unique_id=1234567896]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ButtonContainer" type="VBoxContainer" parent="TitleContainer/MenuBox/MarginContainer" unique_id=1234567897]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="QuitButton" type="Button" parent="TitleContainer/MenuBox/MarginContainer/ButtonContainer" unique_id=1234567899]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_regular")
+theme_override_font_sizes/font_size = 36
+text = "Quit"

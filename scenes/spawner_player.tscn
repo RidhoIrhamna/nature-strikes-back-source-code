@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://htsu3544qqff"]
+
+[ext_resource type="Script" uid="uid://cf34j1vp5vffd" path="res://scripts/spawner_player.gd" id="1_27dp6"]
+[ext_resource type="Texture2D" uid="uid://d22ptd8ggjb1w" path="res://assets/sprites/Pohon.png" id="2_jgnts"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kemah"]
+size = Vector2(666, 1114)
+
+[node name="PlayerSpawner" type="StaticBody2D" unique_id=1199409134 groups=["player"]]
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
+script = ExtResource("1_27dp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2115267069]
+position = Vector2(250, -252)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_jgnts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1674010265]
+position = Vector2(210, -273)
+shape = SubResource("RectangleShape2D_kemah")
+
+[node name="PlayerCooldownTimer" type="Timer" parent="." unique_id=1494546427]
+
+[node name="PemainCooldownTimer" type="Timer" parent="." unique_id=743837179]
+
+[node name="PulayerCooldownTimer" type="Timer" parent="." unique_id=318008911]
